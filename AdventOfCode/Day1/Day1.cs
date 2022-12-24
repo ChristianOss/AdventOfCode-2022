@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode.Day1
+﻿namespace AdventOfCode.Days
 {
     public class Day1 : IProcess
     {
@@ -8,9 +8,9 @@
             return Task.CompletedTask; 
         }
 
-        public void PrintAnswer()
+        private void PrintAnswer()
         {
-            var allMeals = File.ReadAllText(@"Data/Day1CaloriesInput.txt").Split("\r\n\r\n");
+            var allMeals = File.ReadAllText(@"Data/Day1Input.txt").Split("\r\n\r\n");
             var totalCaloriesPerElf = new List<int>();
             foreach(var elfMeals in allMeals)
             {
